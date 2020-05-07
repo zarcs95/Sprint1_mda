@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="cabecera">
+    <ion-title>MPD Admin Section</ion-title>
+    <ion-button class="logout" (click)="logout()">Log out</ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" color="fondo">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="'/add-product'" color="secundario">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-list lines="none" color="fondo" class="ion-no-padding">
+    <ion-item-sliding *ngFor="let product of products; let i=index">
+      <ion-item class="no-padding" color="fondo">
+        <ion-label>
+          <p>Name: {{product.name}}</p>
+          <p>Price: {{product.price}}€</p>
+          <p>Cantidad: {{cantidades[i]}}</p>
+        </ion-label>
+        <ion-button (click)="anadirCantidad(i)">+</ion-button>
+        <ion-button (click)="restarCantidad(i)">-</ion-button>
+      </ion-item>
+        
+    </ion-item-sliding>
+    <ion-item class="no-padding" color="fondo">Total price: {{total}}€</ion-item>
+  </ion-list>
+</ion-content>
+
