@@ -4,6 +4,7 @@ import {LoadingController, NavController, ToastController} from '@ionic/angular'
 import {AngularFirestore} from '@angular/fire/firestore';
 import {AngularFireAuth} from '@angular/fire/auth';
 
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.page.html',

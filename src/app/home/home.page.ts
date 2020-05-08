@@ -4,6 +4,7 @@ import {AngularFirestore} from '@angular/fire/firestore';
 import {AngularFireAuth} from '@angular/fire/auth';
 import * as firebase from 'firebase';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -55,7 +56,6 @@ export class HomePage {
       this.showToast(e);
     }
   }
-
   showToast(message: string) {
     this.toastCtrl.create({
       message,
