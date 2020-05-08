@@ -13,6 +13,7 @@ import * as firebase from 'firebase';
 export class HomePage {
   users: any;
   products: any;
+  images: any;
   constructor(
       private loadingCtrl: LoadingController,
       private toastCtrl: ToastController,
